@@ -1,8 +1,7 @@
 import scrapy
 
-class PublicoSpider(scrapy.Spider):
-    name = 'ctwAndBmw'
-
+class CtwandbmwSpider(scrapy.Spider):
+    name = 'CtwAndBmw'
     urls = [
         'https://www.jn.pt',
         'https://www.dn.pt',
@@ -17,21 +16,21 @@ class PublicoSpider(scrapy.Spider):
     patterns_url = [
         '//a[contains(@href, "bmw")]/@href',
         '//a[contains(@href, "BMW")]/@href',
-        '//a[contains(@href, "Ctw")]/@href'
-        '//a[contains(@href, "ctw")]/@href'
-        '//a[contains(@href, "critical-techworks")]/@href'
-        '//a[contains(@href, "criticaltechworks")]/@href'
+        '//a[contains(@href, "ctw")]/@href',
+        '//a[contains(@href, "Ctw")]/@href',
+        '//a[contains(@href, "critical-techworks")]/@href',
+        '//a[contains(@href, "criticaltechworks")]/@href',
     ]
 
     def prepend(self, title):
-        switcher={
-            'Jornal de Notícias':"https://www.jn.pt",
-            'Diário de Notícias':"https://www.dn.pt",
-            'PÚBLICO — Pense bem, pense Público':"https://www.publico.pt",
-            'Expresso | Liberdade para pensar':"https://www.expresso.pt",
-            'Negócios: Cotações, Mercados, Economia, Empresas':"https://www.jornaldenegocios.pt",
-         }
-        return switcher.get(title,"")
+        switcher = {
+            'Jornal de Notícias': "https://www.jn.pt",
+            'Diário de Notícias': "https://www.dn.pt",
+            'PÚBLICO — Pense bem, pense Público': "https://www.publico.pt",
+            'Expresso | Liberdade para pensar': "https://www.expresso.pt",
+            'Negócios: Cotações, Mercados, Economia, Empresas': "https://www.jornaldenegocios.pt",
+        }
+        return switcher.get(title, "")
 
     def start_requests(self):
         for url in self.urls:

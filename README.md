@@ -1,20 +1,18 @@
 # NewsAgreggator
 
-`$ cd spiders`
-
-<br/>
-
-`Generic crawler`
+##Generic crawler
 
 Usage: scrapy crawl Generic -o generic.json
 
 The result will be output to `generic.json`
 
-<br/>
+##Ctw and Bmw crawler
+`$ cd ctwCrawler`
 
-`Ctw and Bmw crawler`
-
-`$ scrapy crawl ctwAndBmw`
+`$ scrapy crawl CtwAndBmw`
 
 The result will be output to `NewsResult.txt`
 
+##Yammer Publisher
+
+`$ python3 publisher/yammer_pub.py`
