@@ -1,1 +1,2 @@
 scrapy
+git+https://github.com/yammer/yam-python@master#egg=yampy
