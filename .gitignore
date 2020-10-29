@@ -2,3 +2,4 @@
 *.json
 *.pyc
 venv
+ctwCrawler/publisher/access-token.txt

@@ -1,13 +1,16 @@
 # NewsAgreggator
 
+## Requirements
+    $ pip3 install scrapy
+    $ pip3 install yampy
+
 ## Generic crawler
 
 Usage: `scrapy crawl Generic -o generic.json`
 
-The result will be output to `file.json`
+The result will be output to `generic.json`
 
 ## Ctw and Bmw crawler
-`$ cd ctwCrawler`
 
 `$ scrapy crawl CtwAndBmw`
 
@@ -22,12 +25,12 @@ Includes configurations for Público and Notícias ao Minuto.
 
 Outputs json compatible with the Yammer Publisher script.
 
-Usage: `scrapy crawl Crawler3 -o <output file name>`
+Usage: `scrapy crawl Crawler3 -o <output file name>.json`
 
 ## Yammer Publisher
 
-###Get yammer access toke
+###Get yammer access token
     https://www.yammer.com/client_applications
 
 ###Publish to Yammer
-    `$ python3 yammer_client.py
+    $ python3 ctwCrawler/publisher/yammer_client.py
