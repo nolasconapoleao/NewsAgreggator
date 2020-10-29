@@ -3,16 +3,17 @@
 ## Requirements
     $ pip3 install scrapy
     $ pip3 install yampy
+    $ pip3 install --upgrade -e 'git+https://github.com/yammer/yam-python@master#egg=yampy'
 
 ## Generic crawler
 
-Usage: `scrapy crawl Generic -o generic.json`
+Usage: `scrapy crawl Generic -o results.json`
 
-The result will be output to `generic.json`
+The result will be output to `results.json`
 
 ## Ctw and Bmw crawler
 
-`$ scrapy crawl CtwAndBmw`
+Usage: `$ scrapy crawl CtwAndBmw`
 
 The result will be output to `NewsResult.txt`
 
@@ -34,3 +35,7 @@ Usage: `scrapy crawl Crawler3 -o <output file name>.json`
 
 ###Publish to Yammer
     $ python3 ctwCrawler/publisher/yammer_client.py
+    
+## End to end demo
+    scrapy crawl Generic -o results.json
+    python3 ctwCrawler/publisher/yammer_client.py

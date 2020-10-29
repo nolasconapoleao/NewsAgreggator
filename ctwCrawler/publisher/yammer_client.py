@@ -3,11 +3,10 @@ import json
 
 file = open('ctwCrawler/publisher/access-token.txt', 'r')
 access_token = file.readlines()[0].rstrip('\n')
-print(access_token)
 
 yammer = yampy.Yammer(access_token=access_token)
 
-with open('result.json') as json_file:
+with open('results.json') as json_file:
     data = json.load(json_file)
     for row in data:
         domain = row['domain']
