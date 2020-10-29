@@ -2,9 +2,9 @@
 
 ##Generic crawler
 
-Usage: scrapy crawl Generic -o generic.json
+Usage: scrapy crawl Generic -o file.json
 
-The result will be output to `generic.json`
+The result will be output to `file.json`
 
 ##Ctw and Bmw crawler
 `$ cd ctwCrawler`
@@ -15,4 +15,8 @@ The result will be output to `NewsResult.txt`
 
 ##Yammer Publisher
 
-`$ python3 publisher/yammer_pub.py`
+###Get yammer access toke
+    https://www.yammer.com/client_applications
+
+###Publish to Yammer
+    `$ python3 yammer_client.py
